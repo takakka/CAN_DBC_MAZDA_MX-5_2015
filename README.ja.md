@@ -1,5 +1,7 @@
 # CAN_DBC_MAZDA_MX-5 2015-1.5L/MT/JP
 
+[English](README.md) | 日本語
+
 日本仕様の2015年式マツダ ロードスター（MX-5／ND、1.5L・6MT）で収集したCANデータを基に整理したDBCです。
 
 出発点は、**berumiya 990S labo氏の[CAN_DBC_6thGenMazda](https://github.com/berumiya/CAN_DBC_6thGenMazda)**です。元DBCで動作させた後、自車のCANログと実際の操作を照合し、Codexを解析補助として年式差の検討や定義の追加・修正を進めました。元DBCと解析結果を公開してくださったberumiya氏に感謝します。
