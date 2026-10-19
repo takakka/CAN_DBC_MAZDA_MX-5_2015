@@ -1,0 +1,18 @@
+# Keep the distribution limited to DBC and documentation.
+.DS_Store
+*.swp
+*.tmp
+.venv/
+__pycache__/
+data/
+config/local/
+.env
+.env.*
+*.tlg
+*.tlog
+*.gpx
+*.csv
+*.mp4
+*.mov
+*.pem
+*.key

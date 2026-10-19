@@ -1,0 +1,519 @@
+VERSION "ND1-2015-MT-20261019-R2 1.4.1"
+NS_ :
+    CM_
+    VAL_
+BS_:
+BU_: Vector__XXX
+CM_ "Derived from berumiya 990S labo, CAN_DBC_6thGenMazda c802353b4e52546e196b8ee5dc483f73c14dbc2b. Source https://github.com/berumiya/CAN_DBC_6thGenMazda . CC BY 4.0 https://creativecommons.org/licenses/by/4.0/ . Adapted for a Japanese-market 2015 MX-5 1.5L 6MT by takakka; publication changes comments and notices only from R2 v1.4.1. No author or manufacturer endorsement. Original material is hobbyist reverse engineering with no accuracy/completeness warranty; its author disclaims responsibility for resulting loss or damage. Additional contributions: Copyright (c) 2026 takakka, CC BY 4.0.";
+CM_ "Some min/max values are inherited placeholders, not measured sensor limits. Overlapping signal definitions are retained. See README.ja.md and THIRD_PARTY_NOTICES.md for interpretation and attribution.";
+CM_ "Third-party reference: Timur Iskhodzhanov, RaceChronoDiyBleDevice 841c7ab958e92b83953398475e4fc7cdd1c64771, can_db/mazda_mx5_nd.md; https://github.com/timurrrr/RaceChronoDiyBleDevice . MIT-origin reference information retains the following complete notice: MIT License Copyright (c) 2020 Timur Iskhodzhanov Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.";
+BO_ 80 HS_SSU_050: 8 Vector__XXX
+ SG_ KeyState : 1|2@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ KeyStateInv : 58|3@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ StarterInterLockSW : 25|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 117 HS_RCM_075: 8 Vector__XXX
+ SG_ Lateral_Acc_Raw : 23|16@0+ (0.001,-2) [0|1] "G" Vector__XXX
+ SG_ YawRate_Raw : 39|16@0+ (0.01,-180) [0|1] "deg/s" Vector__XXX
+
+BO_ 118 HS_RCM_076: 8 Vector__XXX
+ SG_ Longitudinal_Acc_Raw : 23|16@0+ (0.001,-2) [0|1] "G" Vector__XXX
+
+BO_ 120 HS_ABS_078: 8 Vector__XXX
+ SG_ BrakePressure : 27|20@0+ (0.001,-40) [-40|1008.575] "bar" Vector__XXX
+ SG_ Longi_Acc_Corr : 7|16@0+ (0.00051229499999999996,-29.278700000000001) [0|1] "G" Vector__XXX
+
+BO_ 121 HS_ABS_079: 8 Vector__XXX
+ SG_ Lateral_Acc_Corr_maybe : 7|16@0+ (0.00051229499999999996,-29.278700000000001) [0|1] "" Vector__XXX
+ SG_ YawRate_Corr : 31|16@0+ (0.223437,-114.40000000000001) [0|1] "deg/s" Vector__XXX
+
+BO_ 130 HS_SSU_082: 8 Vector__XXX
+ SG_ Steering_Wheel_Absolute_Angle : 23|16@0+ (0.050000000000000003,-1600) [0|1] "deg" Vector__XXX
+
+BO_ 134 HS_EPAS_086: 8 Vector__XXX
+ SG_ SteeringAngle_related : 7|16@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 145 HS_SSU_091: 8 Vector__XXX
+ SG_ FOG_SW : 1|2@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ FrontWiper : 21|2@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HAZ_SW : 10|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ LIGHT : 7|10@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ RearWiper : 19|2@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ TURN_SW : 13|2@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ WIP_F_INT : 55|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Washer : 17|2@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 154 HS_BCMM_09A: 8 Vector__XXX
+ SG_ F_FOG_RELAY : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Headlight : 7|4@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PanelLight : 50|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Turn : 19|2@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 155 HS_BCMM_09B: 8 Vector__XXX
+ SG_ ND1_Unknown_09B : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 157 HS_SSU_09D: 8 Vector__XXX
+ SG_ CRU_CON_SW1 : 7|10@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 158 HS_IC_09E: 8 Vector__XXX
+ SG_ Fuel_Related_2 : 55|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fuel_Tank : 47|8@0+ (0.20000000000000001,0) [0|1] "L" Vector__XXX
+
+BO_ 159 HS_IC_09F: 8 Vector__XXX
+ SG_ Parking_Brake : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DIM_CSW_Dimmer_Cancel_Switch : 47|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ PCONSW_Panel_Light_Control_Switch : 15|8@0+ (1,0) [0|1] "%" Vector__XXX
+ SG_ Reverse_Flag_maybe : 7|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ReverseLamp_Candidate : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 253 HS_PCM_0FD: 8 Vector__XXX
+ SG_ MT_Gear_Actual : 19|3@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MAP_Manifold_absolute_pressure_sensor : 55|8@0+ (1,2) [10|115] "kPa" Vector__XXX
+ SG_ MT_Gear_Recommend : 13|3@0+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 284 HS_EPAS_11C: 8 Vector__XXX
+ SG_ ND1_Unknown_11C : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 304 HS_PCM_130: 8 Vector__XXX
+ SG_ ND1_Unknown_130 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 357 HS_PCM_165: 8 Vector__XXX
+ SG_ CC_Mode_Related : 7|9@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_Mode_Related2 : 31|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_SetSpeed : 14|8@0+ (1,0) [0|1] "km/h" Vector__XXX
+ SG_ Clutch_Related : 22|7@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ MT_Gear_Position : 55|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ MT_Gear_Select : 36|2@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ReverseGear_Candidate : 24|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ND1_ReverseCandidate_165_B25 : 25|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 358 HS_PCM_166: 8 Vector__XXX
+ SG_ BARO_Barometric_pressure : 35|12@0+ (0.10000000000000001,-267) [0|142.5] "kPa" Vector__XXX
+ SG_ BBP_Brake_Booster_Pressure_2 : 11|12@0+ (0.10000000000000001,0) [0|1] "kPa" Vector__XXX
+ SG_ Clutch_State_Candidate : 7|8@0+ (1,0) [0|255] "raw" Vector__XXX
+
+BO_ 359 HS_PCM_167: 8 Vector__XXX
+ SG_ APP_Accelerator_Pedal_Position : 7|10@0+ (0.10000000000000001,0) [0|1] "%" Vector__XXX
+ SG_ BrakeLamp_Candidate : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 512 HS_PCM_200: 8 Vector__XXX
+ SG_ ND1_Unknown_200 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 514 HS_PCM_202: 8 Vector__XXX
+ SG_ EngineRPM : 7|16@0+ (0.25,0) [0|1] "rpm" Vector__XXX
+ SG_ VehicleSpeed : 23|16@0+ (0.01,0) [0|1] "km/h" Vector__XXX
+ SG_ APP_Accelerator_Pedal_Position : 39|16@0+ (0.0015625000000000001,0) [0|1] "%" Vector__XXX
+
+BO_ 529 HS_ABS_211: 8 Vector__XXX
+ SG_ ND1_Unknown_211 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 533 HS_ABS_215: 8 Vector__XXX
+ SG_ WheelSpeed_1 : 7|16@0+ (0.01,-100) [0|1] "km/h" Vector__XXX
+ SG_ WheelSpeed_2 : 23|16@0+ (0.01,-100) [0|1] "km/h" Vector__XXX
+ SG_ WheelSpeed_3 : 39|16@0+ (0.01,-100) [0|1] "km/h" Vector__XXX
+ SG_ WheelSpeed_4 : 55|16@0+ (0.01,-100) [0|1] "km/h" Vector__XXX
+
+BO_ 535 HS_ABS_217: 8 Vector__XXX
+ SG_ ND1_Unknown_217 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 542 HS_ABS_21E: 8 Vector__XXX
+ SG_ ND1_Unknown_21E : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 543 HS_PCM_21F: 8 Vector__XXX
+ SG_ ND1_Unknown_21F : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 576 HS_EPAS_240: 8 Vector__XXX
+ SG_ SteeringTorque_related : 7|16@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 606 HS_IC_25E: 8 Vector__XXX
+ SG_ DAA_Related : 63|4@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ SpeedUnit : 13|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ StopVehicle : 28|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ VehicleSpeed : 7|10@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 628 HS_SSU_274: 8 Vector__XXX
+ SG_ IC_Buzz : 7|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ INFO_SW : 61|2@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Key_Batt : 39|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Key_fob : 47|4@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Key_hold : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Key_notfound : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 805 HS_EVP_325: 8 Vector__XXX
+ SG_ VS1_Vaccum_Sensor_1 : 7|12@0+ (0.10000000000000001,0) [0|1] "kPa" Vector__XXX
+
+BO_ 832 HS_RCM_340: 8 Vector__XXX
+ SG_ ND1_Unknown_340 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 834 HS_RCM_342: 8 Vector__XXX
+ SG_ ND1_Unknown_342 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 869 HS_MRCC_365: 8 Vector__XXX
+ SG_ Signal_0 : 7|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Signal_1 : 15|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Signal_2 : 23|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Signal_3 : 31|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Signal_4 : 39|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Signal_5 : 47|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Signal_6 : 55|8@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Signal_7 : 63|8@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 977 HS_CMU_MMmonth_Maybe_3D1: 8 Vector__XXX
+ SG_ Date : 49|7@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mileage : 39|22@0+ (1,0) [0|1] "km" Vector__XXX
+
+BO_ 1034 HS_IC_CentralConfig_40A: 8 Vector__XXX
+ SG_ BF00_IG_ON_Timer m48896 : 39|16@0+ (1,0) [0|1] "sec" Vector__XXX
+ SG_ BF01 m48897 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF02 m48898 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF03 m48899 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF04 m48900 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF05 m48901 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF06 m48902 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF07 m48903 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF08 m48904 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF09 m48905 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF0A m48906 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF0B m48907 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF0C m48908 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF0D m48909 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF0E m48910 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF0F m48911 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF10 m48912 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF11 m48913 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF12 m48914 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF13 m48915 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF14 m48916 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF15 m48917 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF16 m48918 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF17 m48919 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF18 m48920 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF19 m48921 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF1A m48922 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF1B m48923 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF1C m48924 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF1D m48925 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF1E m48926 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF1F m48927 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF20 m48928 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BF21 m48929 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ C000_TOTAL_TIME m49152 : 23|32@0+ (0.10000000000000001,1) [0|1] "sec" Vector__XXX
+ SG_ C001_ODO m49153 : 23|32@0+ (1,0) [0|1] "km" Vector__XXX
+ SG_ C103 m49411 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ C104 m49412 : 23|48@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Central_Config_Index M : 7|16@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1045 HS_ABS_415: 8 Vector__XXX
+ SG_ ND1_Unknown_415 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1056 HS_PCM_420: 8 Vector__XXX
+ SG_ CoolantTemp : 7|8@0+ (1,-40) [0|1] "degC" Vector__XXX
+ SG_ AmbientTemp : 63|8@0+ (0.25,0) [0|63.75] "degC" Vector__XXX
+ SG_ Travel_distance_related : 15|8@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1061 HS_LVL_425: 8 Vector__XXX
+ SG_ ND1_Unknown_425 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1067 HS_PCM_42B: 8 Vector__XXX
+ SG_ ND1_Unknown_42B : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1078 HS_IC_EATC_436: 8 Vector__XXX
+ SG_ ND1_Unknown_436 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1085 HS_BCMM_43D: 8 Vector__XXX
+ SG_ ND1_Unknown_43D : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1086 HS_BCMM_43E: 8 Vector__XXX
+ SG_ DoorLeft : 36|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ DoorRight : 37|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ ROOM_FUSE : 51|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ R_FOG_LAMP : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Trunk : 47|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1087 HS_BCMM_43F: 8 Vector__XXX
+ SG_ Fuel_Related : 7|10@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1093 HS_IC_PSM_MZ_445: 8 Vector__XXX
+ SG_ ND1_Unknown_445 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1108 HS_RCM_454: 8 Vector__XXX
+ SG_ ND1_Unknown_454 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1114 HS_BCMM_45A: 8 Vector__XXX
+ SG_ ND1_Unknown_45A : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1115 HS_BCMM_45B: 8 Vector__XXX
+ SG_ ND1_Unknown_45B : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1116 HS_BCMM_45C: 8 Vector__XXX
+ SG_ ND1_Unknown_45C : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1138 HS_RHT_Maybe_472: 8 Vector__XXX
+ SG_ RoofGraphicStatus : 23|4@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1143 HS_IC_477: 8 Vector__XXX
+ SG_ ND1_Unknown_477 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1147 HS_IC_47B: 8 Vector__XXX
+ SG_ BSM_Left : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BSM_Right : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BSM_Warning : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1154 HS_SSU_482: 8 Vector__XXX
+ SG_ ND1_Unknown_482 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1163 HS_BCMM_48B: 8 Vector__XXX
+ SG_ ND1_Unknown_48B : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1166 HS_IC_PSM_MZ_48E: 8 Vector__XXX
+ SG_ ND1_Unknown_48E : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1170 HS_IC_492: 8 Vector__XXX
+ SG_ ND1_Unknown_492 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1180 HS_IC_49C: 8 Vector__XXX
+ SG_ ND1_Unknown_49C : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1233 HS_PCM_4D1: 8 Vector__XXX
+ SG_ ND1_Unknown_4D1 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1236 HS_PCM_4D4: 8 Vector__XXX
+ SG_ ND1_Unknown_4D4 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1237 HS_PCM_4D5: 8 Vector__XXX
+ SG_ ND1_Unknown_4D5 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1238 HS_PCM_4D6: 8 Vector__XXX
+ SG_ ND1_Unknown_4D6 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1239 HS_PCM_4D7: 8 Vector__XXX
+ SG_ ND1_Unknown_4D7 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1241 HS_PCM_4D9: 8 Vector__XXX
+ SG_ ND1_Unknown_4D9 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1242 HS_PCM_4DA: 8 Vector__XXX
+ SG_ ND1_Unknown_4DA : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1243 HS_DCDC_Maybe_4DB: 8 Vector__XXX
+ SG_ ND1_Unknown_4DB : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1244 HS_PCM_4DC: 8 Vector__XXX
+ SG_ ND1_Unknown_4DC : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1264 HS_PCM_4F0: 8 Vector__XXX
+ SG_ ND1_Unknown_4F0 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1266 HS_CMU_Maybe_4F2: 8 Vector__XXX
+ SG_ HUD_Bright : 35|4@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HUD_Height : 27|12@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ HUD_Height_Moving : 28|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1267 HS_IC_4F3: 8 Vector__XXX
+ SG_ ND1_Unknown_4F3 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1271 HS_IC_4F7: 8 Vector__XXX
+ SG_ ND1_Unknown_4F7 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1274 HS_PCM_4FA: 8 Vector__XXX
+ SG_ IAT_Sensor_No1 : 39|8@0+ (1,-40) [-40|160] "degC" Vector__XXX
+
+BO_ 1278 HS_PCM_4FE: 8 Vector__XXX
+ SG_ ND1_Unknown_4FE : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1409 HS_BCMM_581: 8 Vector__XXX
+ SG_ ND1_Unknown_581 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1416 HS_SSU_588: 8 Vector__XXX
+ SG_ ND1_Unknown_588 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1425 HS_IC_591: 8 Vector__XXX
+ SG_ ND1_Unknown_591 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+BO_ 1430 HS_ABS_596: 8 Vector__XXX
+ SG_ ND1_Unknown_596 : 7|64@0+ (1,0) [0|1.8446744073709552e+19] "" Vector__XXX
+
+CM_ SG_ 514 EngineRPM "Engine speed in rpm, decoded as raw/4.";
+CM_ SG_ 514 VehicleSpeed "Vehicle speed in km/h, decoded as raw*0.01.";
+CM_ SG_ 514 APP_Accelerator_Pedal_Position "Accelerator pedal position in percent, decoded as raw/640.";
+CM_ SG_ 120 BrakePressure "20-bit raw*0.001-40 bar. Bar calibration and the meaning of the low byte are unknown.";
+CM_ SG_ 130 Steering_Wheel_Absolute_Angle "Upstream angle definition retained; it does not match the steering observations on this vehicle.";
+CM_ SG_ 159 Parking_Brake "Parking-brake state: 0=released, 1=applied.";
+VAL_ 159 Parking_Brake 0 "Released" 1 "Applied";
+CM_ SG_ 253 MT_Gear_Actual "Actual forward gear 1..6; updates may lag a shift. The reverse input is separate.";
+VAL_ 253 MT_Gear_Actual 0 "UNVERIFIED_0" 1 "1" 2 "2" 3 "3" 4 "4" 5 "5" 6 "6" 7 "UNVERIFIED_7";
+CM_ SG_ 1056 CoolantTemp "Coolant temperature in degC, decoded as raw-40.";
+VAL_ 80 KeyState 0 "OFF" 1 "ACC" 2 "ON" 3 "START";
+VAL_ 80 KeyStateInv 5 "ACC" 7 "OFF" 3 "ON" 0 "START";
+CM_ SG_ 80 StarterInterLockSW "Raw 0/1 value; switch threshold and start-permission function unknown.";
+CM_ SG_ 117 Lateral_Acc_Raw "raw*0.001-2 G, used as lateral acceleration; positive values are treated as leftward. Relation to corrected data unknown.";
+CM_ SG_ 117 YawRate_Raw "raw*0.01-180 deg/s, read as yaw rate. Absolute scale calibration and relation to corrected data unknown.";
+CM_ SG_ 118 Longitudinal_Acc_Raw "raw*0.001-2 G, used as longitudinal acceleration; positive values are treated as forward. Relation to corrected data unknown.";
+CM_ SG_ 120 Longi_Acc_Corr "raw*0.000512295-29.2787 G. Relationship to the 0x076 raw signal unknown.";
+CM_ SG_ 121 Lateral_Acc_Corr_maybe "raw*0.000512295-29.2787; unit and relationship to the 0x075 raw signal unknown.";
+CM_ SG_ 121 YawRate_Corr "raw*0.223437-114.4 deg/s. Values differ from the raw yaw signal by a scale ratio of about 1.523; absolute calibration unknown.";
+CM_ SG_ 134 SteeringAngle_related "Raw value increases with left steering; no angle conversion is applied. Angle zero point and scale unknown.";
+VAL_ 145 FOG_SW 0 "Off" 1 "Rear" 2 "Front" 3 "Front_Rear";
+VAL_ 145 FrontWiper 0 "Off" 1 "ON" 2 "HI" 3 "INT";
+CM_ SG_ 145 HAZ_SW "Hazard-switch state: 0=off, 1=on.";
+VAL_ 145 HAZ_SW 0 "Off" 1 "On";
+CM_ SG_ 145 LIGHT "Raw light-switch setting: 769=off, 768=AUTO, 896=TNS, 960=HEAD. Other codes unknown.";
+VAL_ 145 LIGHT 769 "Off" 768 "AUTO" 896 "TNS" 960 "HEAD";
+VAL_ 145 RearWiper 3 "INT" 1 "ON" 0 "Off";
+CM_ SG_ 145 TURN_SW "Turn-switch state: 0=off, 2=left, 1=right.";
+VAL_ 145 TURN_SW 2 "L" 0 "Off" 1 "R";
+CM_ SG_ 145 WIP_F_INT "Intermittent-wiper setting code: 90/70/50/30/0 from longest to shortest interval; not seconds or percent.";
+VAL_ 145 WIP_F_INT 0 "0" 30 "1" 50 "2" 70 "3" 90 "4";
+VAL_ 145 Washer 0 "Off" 1 "Rear" 2 "Front" 3 "Front+Rear";
+VAL_ 154 F_FOG_RELAY 1 "On" 0 "Off";
+CM_ SG_ 154 Headlight "Observed codes: 2=position lamps, 3=low beam, 12=high beam. Other codes retain upstream labels.";
+VAL_ 154 Headlight 0 "No Description" 2 "TNS" 3 "TNS_Lo" 12 "Hi";
+CM_ SG_ 154 PanelLight "Binary light-related state: 0 with Headlight=0; 1 with Headlight=2/3/12. Not a brightness percentage.";
+VAL_ 154 PanelLight 0 "Day" 1 "Night";
+CM_ SG_ 154 Turn "Turn-lamp state: 0=off, 1=left, 2=right, 3=both.";
+VAL_ 154 Turn 0 "Off" 2 "R" 1 "L" 3 "LR";
+VAL_ 157 CRU_CON_SW1 0 "Not_Pressed" 4 "OFF_CANC" 128 "Set_(Dn)" 64 "Set_(Up)" 1 "ON_MODE" 16 "Resume" 256 "Distance_(Up)" 512 "Distance_(Dn)";
+CM_ SG_ 158 Fuel_Related_2 "Meaning unknown; raw value with no liter or percentage conversion.";
+CM_ SG_ 158 Fuel_Tank "Fuel-level gauge reading in liters. Inclination and acceleration can change the reading; use stable stopped readings as the reference.";
+CM_ SG_ 159 Reverse_Flag_maybe "Raw flag, separate from ReverseLamp_Candidate; physical meaning unknown.";
+CM_ SG_ 253 MAP_Manifold_absolute_pressure_sensor "raw+2 kPa, read as manifold pressure. Physical calibration and complete range unknown.";
+VAL_ 253 MAP_Manifold_absolute_pressure_sensor 257 "Invalid" 10 "10_or_below" 115 "115_or_higher";
+CM_ SG_ 253 MT_Gear_Recommend "Recommended gear: 0=no recommendation, 2..6=gear recommendation. Meanings of 1 and 7 are unknown.";
+VAL_ 253 MT_Gear_Recommend 0 "No_recommendation" 1 "UNVERIFIED_1" 2 "Recommend_gear_2" 3 "Recommend_gear_3" 4 "Recommend_gear_4" 5 "Recommend_gear_5" 6 "Recommend_gear_6" 7 "UNVERIFIED_7";
+VAL_ 357 CC_Mode_Related 0 "OFF" 1 "ON";
+VAL_ 357 CC_Mode_Related2 0 "OFF" 1 "ON";
+CM_ SG_ 357 Clutch_Related "Raw 7-bit value; state meanings unknown.";
+CM_ SG_ 357 MT_Gear_Position "Raw value related to RPM/speed ratio; physical lever-position meaning unknown. Raw 5 alone does not establish fifth gear.";
+VAL_ 357 MT_Gear_Position 19 "N/1st" 11 "2nd" 7 "3rd" 6 "4th" 5 "5th" 3 "6th";
+CM_ SG_ 357 MT_Gear_Select "1=in gear, 2=neutral; meanings of 0 and 3 unknown. This is not the actual gear number.";
+VAL_ 357 MT_Gear_Select 0 "UNVERIFIED_0" 1 "InGear" 2 "Newtral" 3 "UNVERIFIED_3";
+CM_ SG_ 358 BARO_Barometric_pressure "raw*0.1-267 kPa, used as atmospheric pressure. Absolute calibration unknown.";
+CM_ SG_ 358 BBP_Brake_Booster_Pressure_2 "raw*0.1 with a kPa unit label; physical meaning and pressure calibration unknown.";
+CM_ SG_ 359 APP_Accelerator_Pedal_Position "raw*0.1 percent, read as accelerator pedal position rather than throttle-plate angle.";
+CM_ SG_ 533 WheelSpeed_1 "raw*0.01-100 km/h, read as left-wheel speed. Front/rear axle assignment unknown.";
+CM_ SG_ 533 WheelSpeed_2 "raw*0.01-100 km/h, read as right-wheel speed. Front/rear axle assignment unknown.";
+CM_ SG_ 533 WheelSpeed_3 "raw*0.01-100 km/h, read as left-wheel speed. Front/rear axle assignment unknown.";
+CM_ SG_ 533 WheelSpeed_4 "raw*0.01-100 km/h, read as right-wheel speed. Front/rear axle assignment unknown.";
+CM_ SG_ 576 SteeringTorque_related "Raw steering-related value; physical meaning and scale unknown.";
+VAL_ 606 DAA_Related 6 "RecommendRest";
+VAL_ 606 SpeedUnit 0 "km/h" 1 "mph";
+VAL_ 606 StopVehicle 0 "" 1 "Stop_Vehicle_at_safe_area";
+VAL_ 628 IC_Buzz 0 "No Description" 1 "P-P-" 2 "P-P-x3" 3 "PPx6";
+VAL_ 628 INFO_SW 0 "Off" 1 "SW1(Up)" 2 "SW2(Dn)" 3 "SW3(INFO)";
+VAL_ 628 Key_Batt 1 "Key_Battery_is_low" 0 "-";
+VAL_ 628 Key_fob 5 "Lock" 6 "Unlock";
+VAL_ 628 Key_hold 1 "Hold_key_close_to_start_button" 0 "-";
+VAL_ 628 Key_notfound 1 "Key_not_found" 0 "-";
+CM_ SG_ 805 VS1_Vaccum_Sensor_1 "raw*0.1 with a kPa unit label; physical meaning and pressure calibration unknown.";
+CM_ SG_ 869 Signal_0 "Meaning unknown; raw value.";
+CM_ SG_ 869 Signal_1 "Meaning unknown; raw value.";
+CM_ SG_ 869 Signal_2 "Meaning unknown; raw value.";
+CM_ SG_ 869 Signal_3 "Meaning unknown; raw value.";
+CM_ SG_ 869 Signal_4 "Meaning unknown; raw value.";
+CM_ SG_ 869 Signal_5 "Meaning unknown; raw value.";
+CM_ SG_ 869 Signal_6 "Meaning unknown; raw value.";
+CM_ SG_ 869 Signal_7 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF00_IG_ON_Timer "When the index is 0xBF00: raw seconds, read as time since engine start. Reset condition unknown.";
+CM_ SG_ 1034 BF01 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF02 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF03 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF04 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF05 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF06 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF07 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF08 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF09 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF0A "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF0B "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF0C "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF0D "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF0E "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF0F "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF10 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF11 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF12 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF13 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF14 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF15 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF16 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF17 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF18 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF19 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF1A "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF1B "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF1C "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF1D "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF1E "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF1F "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF20 "Meaning unknown; raw value.";
+CM_ SG_ 1034 BF21 "Meaning unknown; raw value.";
+CM_ SG_ 1034 C000_TOTAL_TIME "When the index is 0xC000: raw*0.1+1 seconds. Counter origin and purpose unknown.";
+CM_ SG_ 1034 C001_ODO "When the index is 0xC001: raw kilometers, used as the odometer reading.";
+CM_ SG_ 1034 C103 "Meaning unknown; raw value.";
+CM_ SG_ 1034 C104 "Meaning unknown; raw value.";
+CM_ SG_ 1034 Central_Config_Index "First two bytes select the remaining payload layout: 0xC000=seconds counter, 0xC001=odometer, 0xBF00=engine-start timer.";
+VAL_ 1034 Central_Config_Index 49152 "C000" 49153 "C001" 49408 "C100" 49409 "C101" 49410 "C102" 49411 "C103" 49412 "C104" 48896 "BF00" 48897 "BF01" 48898 "BF02" 48899 "BF03" 48900 "BF04" 48901 "BF05" 48902 "BF06" 48903 "BF07" 48904 "BF08" 48905 "BF09" 48906 "BF0A" 48907 "BF0B" 48908 "BF0C" 48909 "BF0D" 48910 "BF0E" 48911 "BF0F" 48912 "BF10" 48913 "BF11" 48914 "BF12" 48915 "BF13" 48916 "BF14" 48917 "BF15" 48918 "BF16" 48919 "BF17" 48920 "BF18" 48921 "BF19" 48922 "BF1A" 48923 "BF1B" 48924 "BF1C" 48925 "BF1D" 48926 "BF1E" 48927 "BF1F" 48928 "BF20" 48929 "BF21";
+CM_ SG_ 1056 AmbientTemp "byte7*0.25 degC, used as ambient temperature. Subzero encoding, full signal width and invalid values unknown; 0..63.75 is the encoding range.";
+CM_ SG_ 1056 Travel_distance_related "Distance-counter raw value 0..254, modulo 255. Approximately 0.2 m/count; DBC factor and unit remain raw.";
+CM_ SG_ 1086 DoorLeft "Left-door state: 0=closed, 1=ajar.";
+VAL_ 1086 DoorLeft 0 "Closed" 1 "Ajar";
+CM_ SG_ 1086 DoorRight "Right-door state: 0=closed, 1=ajar.";
+VAL_ 1086 DoorRight 0 "Closed" 1 "Ajar";
+VAL_ 1086 R_FOG_LAMP 1 "On" 0 "Off";
+VAL_ 1086 Trunk 0 "Closed" 1 "Open";
+CM_ SG_ 1087 Fuel_Related "Meaning unknown; 10-bit raw value with no liter or percentage conversion.";
+CM_ SG_ 1266 HUD_Height "Raw adjustment endpoints from upstream: 0x00C5 (+) and 0x0DC5 (-).";
+CM_ SG_ 1274 IAT_Sensor_No1 "Intake-air temperature in degC, decoded as raw-40.";
+CM_ SG_ 159 ReverseLamp_Candidate "Read as a reverse-lamp state: 0=off, 1=on. Physical lamp-circuit identity unknown.";
+VAL_ 159 ReverseLamp_Candidate 0 "OFF_CANDIDATE" 1 "ON_CANDIDATE";
+CM_ SG_ 357 ReverseGear_Candidate "Gear indication treats 0 as not R and 1 as R. Selection versus notification meaning unknown.";
+VAL_ 357 ReverseGear_Candidate 0 "NOT_R_CANDIDATE" 1 "R_CANDIDATE";
+CM_ SG_ 357 ND1_ReverseCandidate_165_B25 "Raw 0/1; matches ReverseGear_Candidate in the observed data. Distinct physical role unknown.";
+VAL_ 357 ND1_ReverseCandidate_165_B25 0 "NOT_R_CANDIDATE" 1 "R_CANDIDATE";
+CM_ SG_ 155 ND1_Unknown_09B "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 284 ND1_Unknown_11C "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 304 ND1_Unknown_130 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 512 ND1_Unknown_200 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 529 ND1_Unknown_211 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 535 ND1_Unknown_217 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 542 ND1_Unknown_21E "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 543 ND1_Unknown_21F "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 832 ND1_Unknown_340 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 834 ND1_Unknown_342 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1045 ND1_Unknown_415 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1061 ND1_Unknown_425 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1067 ND1_Unknown_42B "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1078 ND1_Unknown_436 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1085 ND1_Unknown_43D "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1093 ND1_Unknown_445 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1108 ND1_Unknown_454 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1114 ND1_Unknown_45A "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1115 ND1_Unknown_45B "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1116 ND1_Unknown_45C "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1143 ND1_Unknown_477 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1154 ND1_Unknown_482 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1163 ND1_Unknown_48B "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1166 ND1_Unknown_48E "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1170 ND1_Unknown_492 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1180 ND1_Unknown_49C "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1233 ND1_Unknown_4D1 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1236 ND1_Unknown_4D4 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1237 ND1_Unknown_4D5 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1238 ND1_Unknown_4D6 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1239 ND1_Unknown_4D7 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1241 ND1_Unknown_4D9 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1242 ND1_Unknown_4DA "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1243 ND1_Unknown_4DB "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1244 ND1_Unknown_4DC "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1264 ND1_Unknown_4F0 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1267 ND1_Unknown_4F3 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1271 ND1_Unknown_4F7 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1278 ND1_Unknown_4FE "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1409 ND1_Unknown_581 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1416 ND1_Unknown_588 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1425 ND1_Unknown_591 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 1430 ND1_Unknown_596 "Undecoded raw payload; physical meaning and unit unknown.";
+CM_ SG_ 359 BrakeLamp_Candidate "Brake-state input uses 0=off and 1=on. Exact lamp-circuit identity unknown.";
+VAL_ 359 BrakeLamp_Candidate 0 "OFF_CANDIDATE" 1 "ON_CANDIDATE";
+CM_ SG_ 358 Clutch_State_Candidate "Raw 0/62/187 are treated as released/intermediate/deeply pressed clutch states. No pedal-travel or force conversion is applied.";
+VAL_ 358 Clutch_State_Candidate 0 "RELEASED_CANDIDATE" 62 "INTERMEDIATE_CANDIDATE" 187 "DEEP_PRESSED_CANDIDATE";
